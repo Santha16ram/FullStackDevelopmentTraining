@@ -1,7 +1,10 @@
-import Counter from "./Hooks/UseState/Counter";
-import Players from "./Players";
-import Score from "./Hooks/UseState/Score";
-import Flipkart from "./components/Flipkart";
+// import Counter from "./Hooks/UseState/Counter";
+// import Players from "./Players";
+// import Score from "./Hooks/UseState/Score";
+// import User from "./Hooks/UseEffects/User";
+// import Flipkart from "./components/Flipkart";
+// import FetchAPI from "./components/FetchAPI"
+import Registration from "./components/Registration";
 
 const App = () => {
 //   let players = [
@@ -14,18 +17,21 @@ const App = () => {
   const mobile = "iphone 14 pro max";
   return (
     <div style={{ backgroundColor: "#000000", padding: "20px", textAlign: "center", fontFamily: "fantasy"  }}>
-      {/* <h1>Welcome to App</h1>
-
+      <h1>Welcome to App</h1>
+{/* 
       <hr style={{ margin: "20px 0" }} />
 
       <h2>Indian Cricket Players</h2>
        <Players obj1={players} /> 
-      <Counter />*/}
-  {/*       
+      <Counter />
+            
       <h1>Display Score</h1>
-      <Score /> */}
+      <Score />
       <h1>Welcome to Components page</h1>
-      <Flipkart mobile = {mobile} />
+      <Flipkart mobile = {mobile} /> 
+      <User/>
+      <FetchAPI/> */}
+      <Registration/>
     </div>
   );
 };
