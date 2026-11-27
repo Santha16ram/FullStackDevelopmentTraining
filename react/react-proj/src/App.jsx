@@ -4,7 +4,12 @@
 // import User from "./Hooks/UseEffects/User";
 // import Flipkart from "./components/Flipkart";
 // import FetchAPI from "./components/FetchAPI"
-import Registration from "./components/Registration";
+// import Registration from "./components/Registration";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import NavBar from "./components/NavBar";
 
 const App = () => {
 //   let players = [
@@ -14,7 +19,7 @@ const App = () => {
 //     { id: 4, name: "Jasprit Bumrah"}
 //   ];
 
-  const mobile = "iphone 14 pro max";
+  // const mobile = "iphone 14 pro max";
   return (
     <div style={{ backgroundColor: "#000000", padding: "20px", textAlign: "center", fontFamily: "fantasy"  }}>
       <h1>Welcome to App</h1>
@@ -30,8 +35,17 @@ const App = () => {
       <h1>Welcome to Components page</h1>
       <Flipkart mobile = {mobile} /> 
       <User/>
-      <FetchAPI/> */}
-      <Registration/>
+      <FetchAPI/> 
+      <Registration/>*/}
+
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
